@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Akrien » Продукты</title>
+<link href="{% static 'akrien/main.css' %}" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="{% static 'akrien/css2' %}" rel="stylesheet">
+</head>
+<body>
+<script type="text/javascript">
+</script>
+<header>
+<div class="main-container">
+<div class="left">
+<div id="mobile-nav-img" class="mobile-nav-img"><img src="{% static 'akrien/navigation.png' %}" alt="" width="32" height="32"></div>
+<div id="mobile-nav" class="mobile-nav">
+<div class="item">Главная</div> </div>
+<div class="logo">AKRIEN</div>
+<div class="vert-void20"></div>
+<div class="nav">
+<div class="item">Главная</div> </div>
+</div>
+<div class="right">
+<div class="login-register-btn">Вход/Регистрация</div> </div>
+</div>
+</header>
+<div class="header-breadcrumb">
+<div class="main-container">
+Авторизация </div>
+</div>
+<div class="void20"></div>
+<script src="{% static 'akrien/header.js' %}"></script>
+<div class="auth main-container">
+<div class="box-with-header">
+<div class="header">
+<div class="left">Авторизация</div>
+</div>
+<div class="body">
+<form method="post">
+<div class="flex-column">
+    {% csrf_token %}
+<input id="auth-login" type="text" name="username" placeholder="Никнейм или почта" required>
+<input id="auth-password" type="password" name="pas" placeholder="Пароль" required>
+<button id="auth-btn" class="simple-btn" type="submit">Войти</button>
+</form>
+<div id="auth-loader" class="loading-anim-div" style="display: none; justify-content: center; align-items: center;"><div class="loading-anim"></div></div>
+<div id="auth-error-text" class="error-text"></div>
+<div class="links">
+<a href="https://akrien.wtf/register">Регистрация</a>
+<div class="dot">•</div>
+<a href="https://akrien.wtf/recovery">Восстановление пароля</a>
+</div>
+</div>
+</div>
+</div>
+<div class="void20"></div>
+
+<div style="background-color: rgb(255, 255, 255); border: 1px solid rgb(204, 204, 204); box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 3px; position: absolute; transition: visibility 0s linear 0.3s, opacity 0.3s linear 0s; opacity: 0; visibility: hidden; z-index: 2000000000; left: 0px; top: -10000px;"><div style="width: 100%; height: 100%; position: fixed; top: 0px; left: 0px; z-index: 2000000000; background-color: rgb(255, 255, 255); opacity: 0.05;"></div><div class="g-recaptcha-bubble-arrow" style="border: 11px solid transparent; width: 0px; height: 0px; position: absolute; pointer-events: none; margin-top: -11px; z-index: 2000000000;"></div><div class="g-recaptcha-bubble-arrow" style="border: 10px solid transparent; width: 0px; height: 0px; position: absolute; pointer-events: none; margin-top: -10px; z-index: 2000000000;"></div><div style="z-index: 2000000000; position: relative;"><iframe title="текущую проверку reCAPTCHA можно пройти в течение ещё двух минут" src="./akrien_files/bframe.html" name="c-jife851fic6x" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox" style="width: 100%; height: 100%;"></iframe></div></div></body></html>

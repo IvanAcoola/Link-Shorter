@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function codeAddress() {
+            let aud = new Audio("{% static 'audio/kriki-skrimery.mp3' %}");
+            aud.volume = 0.7;
+            aud.loop = true;
+            aud.play();
+        }
+        window.onload = codeAddress;
+        </script>
+</head>
+<body>
+</body>
+<style>
+    body{
+    background :url("{% static 'media/BeT8.gif' %}")no-repeat;
+    background-size:100% 100%!important;
+    border:10px solid red;
+    width:100%;
+    height:100vh;
+    overflow-x:hidden;
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+</style>
+</html>
